@@ -28,7 +28,10 @@ export default async function Projects() {
           quality and accessibility of education for everyone. Take a look at
           some of our current and past projects.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 grid-flow-row mt-10" data-testid={testIds.PROJECTS_PAGE.PROJECT_LIST}>
+        <div 
+          className="grid grid-cols-1 sm:grid-cols-3 gap-5 grid-flow-row mt-10"
+          data-testid={testIds.PROJECTS_PAGE.PROJECT_LIST}
+        >
           {items!.map((item) => (
             <div key={item._id} className="p-4 relative">
               <div className="sm:w-[370px] h-[320px] relative">
