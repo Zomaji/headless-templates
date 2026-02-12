@@ -33,16 +33,13 @@ export default async function Projects() {
             <div key={item._id} className="p-4 relative">
               <div className="sm:w-[370px] h-[320px] relative">
                 <WixMediaImage
-                  media={item.image}
+                  media={item.Image}
                   alt={item.Type}
                   objectFit="cover"
                 />
               </div>
               <div className="bg-white sm:mt-[-50px] border-t-4 relative mx-6 px-2 pt-3 border-blue-site text-center">
-                
                 <p className="text-sm mb-6">{item.Prompt}</p>
-                
-                </a>
               </div>
             </div>
           ))}
