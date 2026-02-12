@@ -3,7 +3,7 @@ import { WixMediaImage } from '@app/components/Image/WixMediaImage';
 import testIds from '@app/utils/test-ids';
 export default async function Projects() {
   const wixClient = await getWixClient();
-  const { items } = await wixClient.items.query('Our-Projects').find();
+  const { items } = await wixClient.items.query('PromptTemplates').find();
 
   return (
     <div className="relative">
@@ -36,24 +36,19 @@ export default async function Projects() {
             <div
               key={item._id}
               className="p-4 relative"
-              data-testid={testIds.PROJECTS_PAGE.PROJECT_ITEM_CONTAINER}
+              
             >
               <div className="sm:w-[370px] h-[320px] relative">
                 <WixMediaImage
-                  media={item.cover}
-                  alt={item.title}
+                  media={item.image}
+                  alt={item.Type}
                   objectFit="cover"
                 />
               </div>
               <div className="bg-white sm:mt-[-50px] border-t-4 relative mx-6 px-2 pt-3 border-blue-site text-center">
-                <h2 className="mb-10 font-site">{item.title}</h2>
-                <p className="text-sm mb-6">{item.shortDescription}</p>
-                <a
-                  data-testid={testIds.PROJECTS_PAGE.PROJECT_ITEM_CTA}
-                  href={`/projects/${item.slug}`}
-                  className="text-purple-site py-6 font-site"
-                >
-                  Read More
+                
+                <p className="text-sm mb-6">{item.Prompt}</p>
+                
                 </a>
               </div>
             </div>
